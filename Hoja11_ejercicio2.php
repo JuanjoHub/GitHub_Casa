@@ -223,10 +223,17 @@ class Empresa{
         array_push($this->Empleados, $emp1);
     }
 
+    public function salario_total_empleados(){
+
+        $sueldo_TOTAL=0;
+        foreach ($this->Empleados as $key => $Empleado) {
+            
+           $sueldo_TOTAL+=$Empleado->getSueldo(); 
+        }
+
+        return $sueldo_TOTAL;
+    }
 
 }
-
-
-
 
 ?>
